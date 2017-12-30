@@ -422,6 +422,52 @@
 	}
 	
 	//=================================================================================================================
+	// Enchantress: Impetus
+	//=================================================================================================================
+	"enchantress_impetus"
+	{
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"distance_cap"			"1250"
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Obsidian Destroyer: Arcane Orb
+	//=================================================================================================================
+	"obsidian_destroyer_arcane_orb"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_pool_damage_pct"	"5 6 7 8"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"illusion_damage"		"100 200 300 400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"int_steal"		"1 2 3 4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"int_steal_duration"		"15"
+			}
+		}
+	}
+	
+	//=================================================================================================================
 	// Pugna: Nether Ward
 	//=================================================================================================================
 	"pugna_nether_ward"
@@ -454,31 +500,72 @@
 	}
 	
 	//=================================================================================================================
-	// Obsidian Destroyer: Arcane Orb
+	// Skywrath Mage: Arcane Bolt
 	//=================================================================================================================
-	"obsidian_destroyer_arcane_orb"
+	"skywrath_mage_arcane_bolt"
+	{
+		"AbilitySpecial"
+		{
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"scepter_radius"		"450"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Skywrath Mage: Concussive Shot
+	//=================================================================================================================
+	"skywrath_mage_concussive_shot"
+	{
+		"AbilitySpecial"
+		{
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"scepter_radius"		"450"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Skywrath Mage: Ancient Seal
+	//=================================================================================================================
+	"skywrath_mage_ancient_seal"
 	{
 		"AbilitySpecial"
 		{
 			"01"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_pool_damage_pct"	"5 6 7 8"
+				"var_type"				"FIELD_INTEGER"
+				"resist_debuff"			"-20 -25 -30 -35"
+				"LinkedSpecialBonus"	"special_bonus_unique_skywrath_3"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"illusion_damage"		"100 200 300 400"
+				"var_type"				"FIELD_FLOAT"
+				"seal_duration"			"3.0 4.0 5.0 6.0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"int_steal"		"1 2 3 4"
+				"scepter_radius"		"450"
 			}
-			"04"
+		}
+	}
+
+	//=================================================================================================================
+	// Skywrath Mage: Mystic Flare
+	//=================================================================================================================
+	"skywrath_mage_mystic_flare"
+	{
+		"AbilitySpecial"
+		{
+			"05"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"int_steal_duration"		"15"
+				"var_type"				"FIELD_INTEGER"
+				"scepter_radius"		"450"
 			}
 		}
 	}
