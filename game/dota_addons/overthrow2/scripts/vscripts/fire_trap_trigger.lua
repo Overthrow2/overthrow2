@@ -18,12 +18,12 @@ function OnStartTouch(trigger)
 		return
 	end
 	triggerActive = false
-	npc:SetContextThink( "ResetButtonModel", function() ResetButtonModel() end, 2 )
+	npc:SetContextThink( "ResetButtonModel", function() ResetButtonModel() end, 4 )
 	npc:CastAbilityOnPosition(target:GetOrigin(), fireTrap, -1 )
 	DoEntFire( button, "SetAnimation", "ancient_trigger001_down", 0, self, self )
 	DoEntFire( button, "SetAnimation", "ancient_trigger001_down_idle", .35, self, self )
-	DoEntFire( button, "SetAnimation", "ancient_trigger001_up", 2, self, self )
-	DoEntFire( button, "SetAnimation", "ancient_trigger001_idle", 2.5, self, self )
+	DoEntFire( button, "SetAnimation", "ancient_trigger001_up", 4, self, self )
+	DoEntFire( button, "SetAnimation", "ancient_trigger001_idle", 4.5, self, self )
 
 	DoEntFire( model, "SetAnimation", "bark_attack", .4, self, self )
 	local heroIndex = trigger.activator:GetEntityIndex()
