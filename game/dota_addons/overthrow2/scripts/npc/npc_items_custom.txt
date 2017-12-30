@@ -30,7 +30,7 @@
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"0"
 		"ItemKillable"					"0"
-		"ItemCastOnPickup"				"1"
+		"ItemCastOnPickup"				"0"
 	}
 	//=================================================================================================================
 	// Treasure Chest

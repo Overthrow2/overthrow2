@@ -19,7 +19,7 @@ function OnStartTouch(trigger)
 		return
 	end
 	triggerActive = false
-	thisEntity:SetContextThink( "ResetTrapModel", function() ResetTrapModel() end, 17 )
+	thisEntity:SetContextThink( "ResetTrapModel", function() ResetTrapModel() end, 60 )
 
 	EnablePendulum( triggerName, heroHandle )
 
@@ -27,15 +27,15 @@ function OnStartTouch(trigger)
 	local buttonFx = triggerName .. "_buttonFX"
 	DoEntFire( button, "SetAnimation", "ancient_trigger001_down", 0, self, self )
 	DoEntFire( button, "SetAnimation", "ancient_trigger001_down_idle", .35, self, self )
-	DoEntFire( button, "SetAnimation", "ancient_trigger001_up", 17, self, self )
-	DoEntFire( button, "SetAnimation", "ancient_trigger001_idle", 17.5, self, self )
+	DoEntFire( button, "SetAnimation", "ancient_trigger001_up", 60, self, self )
+	DoEntFire( button, "SetAnimation", "ancient_trigger001_idle", 60.5, self, self )
 	--DoEntFire( buttonFx, "Start", "", 0, self, self )
 	--DoEntFire( buttonFx, "Stop", "", 2, self, self )
 end
 
 function EnablePendulum( triggerName, heroHandle )
 	if isPendulumReady == true then
-		--print("Enabling Pendulum")
+		print("Enabling Pendulum")
 		isPendulumReady = false
 		EmitGlobalSound("Conquest.Pendulum.Trigger")
 		EmitGlobalSound("tutorial_rockslide")
@@ -58,7 +58,7 @@ function EnablePendulum( triggerName, heroHandle )
 end
 
 function DisablePendulum( triggerName, heroHandle )
-	--print( "Disabling Pendulum" )
+	print( "Disabling Pendulum" )
 	isPendulumReady = true
 	if triggerCounter > 0 then
 		--print("Reactivate the trap")

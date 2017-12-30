@@ -322,7 +322,7 @@ function COverthrowGameMode:TreasureDrop( treasureCourier )
 	DoEntFire( "item_spawn_particle_" .. self.itemSpawnIndex, "stopplayendcap", "0", 0, self, self )
 
 	--Knock people back from the treasure
-	self:KnockBackFromTreasure( spawnPoint, 375, 0.25, 400, 100 )
+	self:KnockBackFromTreasure( spawnPoint, 250, 0.25, 400, 100 )
 		
 	--Destroy the courier
 	UTIL_Remove( treasureCourier )
