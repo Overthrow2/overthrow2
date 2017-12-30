@@ -475,7 +475,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"range"					"650"
+				"range"					"500"
 			}
 			"04"
 			{
@@ -485,7 +485,12 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"fire_damage"			"400"
+				"fire_damage"			"150"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"activation_count_bonus_damage"			"50"
 			}
 		}
 	}
@@ -544,7 +549,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"15.0"
+				"duration"				"8.0"
 			}
 			"07"
 			{
@@ -554,17 +559,17 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tick_damage"			"100"
+				"tick_damage"			"10"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"tick_interval"			"3.0"
+				"tick_interval"			"0.5"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"movement_slow"			"-50"
+				"movement_slow"			"-30"
 			}
 		}
 	}
@@ -586,7 +591,7 @@
 		
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"150"
+		"AbilityDamage"					"300"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -621,7 +626,12 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"light_strike_array_damage"			"600"
+				"light_strike_array_damage"			"300"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"activation_count_bonus_damage"			"100"
 			}
 		}
 	}

@@ -5,6 +5,7 @@
 ---------------------------------------------------------------------------
 
 local triggerActive = true
+local triggerCounter = 0
 
 function Fire(trigger)
 	local triggerName = thisEntity:GetName()
@@ -16,7 +17,10 @@ function Fire(trigger)
 	local fx = triggerName .. "_fx"
 	--print(spikes)
 	if target ~= nil and triggerActive == true then
+		print("AI counter: "..triggerCounter)
 		local spikeTrap = thisEntity:FindAbilityByName("spike_trap")
+		spikeTrap.triggerCounter = triggerCounter
+		triggerCounter = triggerCounter + 1
 		thisEntity:CastAbilityOnPosition(target:GetOrigin(), spikeTrap, -1 )
 		EmitSoundOn( "Conquest.SpikeTrap.Plate" , spikeTrap)
 		DoEntFire( spikes, "SetAnimation", "spiketrap_activate", 0, self, self )

@@ -9,10 +9,20 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_spike_trap_thinker_lua:OnCreated( kv )
+print("Thinker created! 2")
+	if self.triggerCounter == nil then
+		self.triggerCounter = 0
+	end
 	self.light_strike_array_aoe = self:GetAbility():GetSpecialValueFor( "light_strike_array_aoe" )
 	self.light_strike_array_damage = self:GetAbility():GetSpecialValueFor( "light_strike_array_damage" )
+	self.bonus_damage = self:GetAbility():GetSpecialValueFor( "activation_count_bonus_damage" )
 	self.light_strike_array_stun_duration = self:GetAbility():GetSpecialValueFor( "light_strike_array_stun_duration" )
 	self.light_strike_array_delay_time = self:GetAbility():GetSpecialValueFor( "light_strike_array_delay_time" )
+	DeepPrintTable( kv )
+	if kv["triggerCounter"] ~= nil then
+		self.triggerCounter = kv["triggerCounter"]
+	end
+	print(" MODIFIER counter: " .. self.triggerCounter )
 	if IsServer() then
 		self:StartIntervalThink( self.light_strike_array_delay_time )
 
@@ -31,14 +41,17 @@ function modifier_spike_trap_thinker_lua:OnIntervalThink()
 	if IsServer() then
 		GridNav:DestroyTreesAroundPoint( self:GetParent():GetOrigin(), self.light_strike_array_aoe, false )
 		local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), self:GetParent():GetOrigin(), self:GetParent(), self.light_strike_array_aoe, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, 0, false )
+		local totalDamage = self.light_strike_array_damage + (self.bonus_damage * self.triggerCounter)
 		if #enemies > 0 then
 			for _,enemy in pairs(enemies) do
 				if enemy ~= nil and ( not enemy:IsMagicImmune() ) and ( not enemy:IsInvulnerable() ) then
-
+					
+					print(' dealing damage : ' .. totalDamage )
+					
 					local damage = {
 						victim = enemy,
 						attacker = self:GetCaster(),
-						damage = self.light_strike_array_damage,
+						damage = totalDamage,
 						damage_type = DAMAGE_TYPE_PHYSICAL,
 						ability = self:GetAbility()
 					}

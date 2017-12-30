@@ -3,6 +3,8 @@
 
 local triggerActive = true
 
+local triggerCounter = 0
+
 function OnStartTouch(trigger)
 	local triggerName = thisEntity:GetName()
 	local team = trigger.activator:GetTeam()
@@ -18,6 +20,8 @@ function OnStartTouch(trigger)
 		return
 	end
 	triggerActive = false
+	fireTrap.triggerCounter = triggerCounter
+	triggerCounter = triggerCounter + 1
 	npc:SetContextThink( "ResetButtonModel", function() ResetButtonModel() end, 4 )
 	npc:CastAbilityOnPosition(target:GetOrigin(), fireTrap, -1 )
 	DoEntFire( button, "SetAnimation", "ancient_trigger001_down", 0, self, self )

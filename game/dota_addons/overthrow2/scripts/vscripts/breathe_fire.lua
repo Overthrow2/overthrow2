@@ -8,7 +8,7 @@ function breathe_fire:OnSpellStart()
 	self.range = self:GetSpecialValueFor( "range" )
 	self.speed = self:GetSpecialValueFor( "speed" )
 	self.fire_damage = self:GetSpecialValueFor( "fire_damage" ) 
-
+	self.bonus_damage = self:GetSpecialValueFor( "activation_count_bonus_damage" )
 	
 
 	local vPos = nil
@@ -48,10 +48,10 @@ end
 
 function breathe_fire:OnProjectileHit( hTarget, vLocation )
 	local fireDamage = self.fire_damage
-	if self.targetLevel ~= nil and self.targetLevel > 3 then
-		fireDamage = fireDamage * ( self.targetLevel / 3 )
-		print("Increased Damage")
-	end
+	local bonusCounter = self.triggerCounter
+	
+	local totalDamage = fireDamage + ( self.bonus_damage * bonusCounter )
+	
 	if hTarget ~= nil and ( not hTarget:IsMagicImmune() ) and ( not hTarget:IsInvulnerable() ) then
 
 		local damageSource = self:GetCaster()
@@ -59,10 +59,12 @@ function breathe_fire:OnProjectileHit( hTarget, vLocation )
 			damageSource = self:GetCaster().KillerToCredit
 		end
 
+		print(' dealing total damage : ' .. totalDamage )
+		
 		local damage = {
 			victim = hTarget,
 			attacker = damageSource,
-			damage = fireDamage,
+			damage = totalDamage,
 			damage_type = DAMAGE_TYPE_MAGICAL,
 			ability = self
 		}
