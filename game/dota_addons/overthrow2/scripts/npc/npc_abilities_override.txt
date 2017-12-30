@@ -351,14 +351,96 @@
 		}
 	}
 	
-	
 	//=================================================================================================================
 	// Tinker: Laser
 	//=================================================================================================================
+	"tinker_laser"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"miss_rate"				"50 50 50 50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_hero"			"3 3 3 3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_creep"		"6.0 6.0 6.0 6.0"
+			}	
+			"04"	
+			{
+				"var_type"				"FIELD_INTEGER"
+				"laser_damage"			"80 160 240 320"
+				"LinkedSpecialBonus"	"special_bonus_unique_tinker"
+			}	
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range_tooltip"	"575"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range_scepter"	"575"
+			}
+		}
+	}
+	
 	//=================================================================================================================
-	// Tinker: Rockets
+	// Tinker: Heat Seeking Missile
 	//=================================================================================================================
+	"tinker_heat_seeking_missile"
+	{
+		"AbilitySpecial"
+		{ 
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"120 180 240 350"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"2000 2000 2000 2000"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"targets"			"2 2 2 2"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"600"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"targets_scepter"	"3 3 3 3"
+			}
+		}
+	}
+
+	
 	//=================================================================================================================
 	// Tinker: Rearm
 	//=================================================================================================================
+	"tinker_rearm"
+	{
+		"AbilityChannelTime"			"3.0 2.0 1.0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"channel_tooltip"			"3.0 2.0 1.0"
+			}
+		}
+	}
 }
