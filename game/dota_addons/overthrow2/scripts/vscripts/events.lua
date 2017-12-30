@@ -32,7 +32,7 @@ function COverthrowGameMode:OnGameRulesStateChange()
 		elseif GetMapName() == "temple_quartet" then
 			self.TEAM_KILLS_TO_WIN = 50
 		else
-			self.TEAM_KILLS_TO_WIN = 30
+			self.TEAM_KILLS_TO_WIN = 40
 		end
 		--print( "Kills to win = " .. tostring(self.TEAM_KILLS_TO_WIN) )
 
