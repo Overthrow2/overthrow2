@@ -164,9 +164,9 @@
 							"Types"			"DOTA_UNIT_TARGET_HERO"
 							"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
 						}
-						"XPAmount"		"8"
+						"XPAmount"		"10"
 						"SplitEvenly"	"0"
-						"GoldAmount"	"4"
+						"GoldAmount"	"6"
 						"ReliableGold"	"0"
 					}
 				}
@@ -222,9 +222,9 @@
 							"Types"			"DOTA_UNIT_TARGET_HERO"
 							"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
 						}
-						"XPAmount"		"16"
+						"XPAmount"		"20"
 						"SplitEvenly"	"0"
-						"GoldAmount"	"10"
+						"GoldAmount"	"12"
 						"ReliableGold"	"0"
 					}
 				}
@@ -280,9 +280,9 @@
 							"Types"			"DOTA_UNIT_TARGET_HERO"
 							"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
 						}
-						"XPAmount"		"6"
+						"XPAmount"		"8"
 						"SplitEvenly"	"0"
-						"GoldAmount"	"4"
+						"GoldAmount"	"5"
 						"ReliableGold"	"0"
 					}
 				}
