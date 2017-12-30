@@ -1,0 +1,17 @@
+D2ModKit/
+D2Soundeditor/
+config/
+dota/
+*.log
+*.mdmp
+installscript.vdf
+steam_appid.txt
+_CommonRedist/
+!.gitignore
+!.gitattributes
+game/thirdpartylegalnotices.txt
+game/*/*
+content/*/*
+steam_shader_cache/*
+!game/dota_addons/overthrow2
+!content/dota_addons/overthrow2
