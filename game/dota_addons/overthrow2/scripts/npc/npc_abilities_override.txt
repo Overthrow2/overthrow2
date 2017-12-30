@@ -417,7 +417,7 @@
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"speed"				"600"
+				"speed"				"700"
 			}
 			"05"
 			{
@@ -443,4 +443,118 @@
 			}
 		}
 	}
+	//=================================================================================================================
+	// Undying: Decay
+	//=================================================================================================================
+	"undying_decay"
+	{
+		"AbilityCooldown"				"10.0 9.0 8.0 7.0"
+		"AbilityDuration"				"15.0 15.0 15.0 15.0"
+		
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"str_steal"						"3"
+			}	
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"decay_duration"				"15"
+				"LinkedSpecialBonus"			"special_bonus_unique_undying_4"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"275"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"str_steal_scepter"				"8"
+			}				
+		}
+	}
+
+	//=================================================================================================================
+	// Undying: Soul Rip
+	//=================================================================================================================
+	"undying_soul_rip"
+	{
+		"AbilityCastRange"				"650"
+
+		"AbilitySpecial"
+		{
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"1100"
+			}
+		}
+	}	
+
+	//=================================================================================================================
+	// Undying: Tombstone
+	//=================================================================================================================
+	"undying_tombstone"
+	{
+		"AbilityCooldown"				"70 65 60 55"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tombstone_health"				"8 8 10 12"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hits_to_destroy_tooltip"				"4 4 5 6"
+				"LinkedSpecialBonus"		"special_bonus_unique_undying_5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"20.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"800"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"zombie_interval"		"4.5 4.0 3.5 3.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Undying: Flesh Golem
+	//=================================================================================================================
+	"undying_flesh_golem"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"25"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"650"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max_damage_amp"			"15 20 25"
+			}
+		}
+	}
+
 }
