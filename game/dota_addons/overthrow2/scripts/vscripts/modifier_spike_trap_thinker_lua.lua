@@ -9,7 +9,6 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_spike_trap_thinker_lua:OnCreated( kv )
-print("Thinker created! 2")
 	if self.triggerCounter == nil then
 		self.triggerCounter = 0
 	end
@@ -18,11 +17,10 @@ print("Thinker created! 2")
 	self.bonus_damage = self:GetAbility():GetSpecialValueFor( "activation_count_bonus_damage" )
 	self.light_strike_array_stun_duration = self:GetAbility():GetSpecialValueFor( "light_strike_array_stun_duration" )
 	self.light_strike_array_delay_time = self:GetAbility():GetSpecialValueFor( "light_strike_array_delay_time" )
-	DeepPrintTable( kv )
+	
 	if kv["triggerCounter"] ~= nil then
 		self.triggerCounter = kv["triggerCounter"]
 	end
-	print(" MODIFIER counter: " .. self.triggerCounter )
 	if IsServer() then
 		self:StartIntervalThink( self.light_strike_array_delay_time )
 
@@ -46,7 +44,6 @@ function modifier_spike_trap_thinker_lua:OnIntervalThink()
 			for _,enemy in pairs(enemies) do
 				if enemy ~= nil and ( not enemy:IsMagicImmune() ) and ( not enemy:IsInvulnerable() ) then
 					
-					print(' dealing damage : ' .. totalDamage )
 					
 					local damage = {
 						victim = enemy,

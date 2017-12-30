@@ -17,7 +17,6 @@ function Fire(trigger)
 	local fx = triggerName .. "_fx"
 	--print(spikes)
 	if target ~= nil and triggerActive == true then
-		print("AI counter: "..triggerCounter)
 		local spikeTrap = thisEntity:FindAbilityByName("spike_trap")
 		spikeTrap.triggerCounter = triggerCounter
 		triggerCounter = triggerCounter + 1

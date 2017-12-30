@@ -559,7 +559,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tick_damage"			"10"
+				"tick_damage"			"20"
 			}
 			"09"
 			{
@@ -569,7 +569,7 @@
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"movement_slow"			"-30"
+				"movement_slow"			"-35"
 			}
 		}
 	}

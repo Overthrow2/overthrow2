@@ -13,7 +13,6 @@ end
 function spike_trap:OnSpellStart()
 	self.light_strike_array_aoe = self:GetSpecialValueFor( "light_strike_array_aoe" )
 	self.light_strike_array_delay_time = self:GetSpecialValueFor( "light_strike_array_delay_time" )
-	print(" ABILITY counter: " .. self.triggerCounter )
 	local kv = {}
 	kv["triggerCounter"] = self.triggerCounter
 	CreateModifierThinker( self:GetCaster(), self, "modifier_spike_trap_thinker_lua", kv, self:GetCursorPosition(), self:GetCaster():GetTeamNumber(), false )
