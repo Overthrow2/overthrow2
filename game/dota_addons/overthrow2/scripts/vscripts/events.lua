@@ -142,7 +142,7 @@ function COverthrowGameMode:OnEntityKilled( event )
 						if ability:GetAbilityName() ~= nil then
 							if ability:GetAbilityName() == "necrolyte_reapers_scythe" then
 								print("Killed by Necro Ult")
-								extraTime = 20
+								extraTime = ability:GetSpecialValueFor("respawn_constant")
 							end
 						end
 					end
