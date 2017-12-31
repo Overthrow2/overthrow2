@@ -4,6 +4,7 @@ config/
 dota/
 *.log
 *.mdmp
+*.psd
 installscript.vdf
 steam_appid.txt
 _CommonRedist/
