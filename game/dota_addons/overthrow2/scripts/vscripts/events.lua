@@ -200,19 +200,22 @@ function COverthrowGameMode:SetRespawnTime( killedTeam, killedUnit, extraTime )
 	end
 end
 
-
+local totalBagsPickedUp = 0
 --------------------------------------------------------------------------------
 -- Event: OnItemPickUp
 --------------------------------------------------------------------------------
 function COverthrowGameMode:OnItemPickUp( event )
 	local item = EntIndexToHScript( event.ItemEntityIndex )
 	local owner = EntIndexToHScript( event.HeroEntityIndex )
-	r = 300
+	r = 280
 	--r = RandomInt(200, 400)
-	if event.itemname == "item_bag_of_gold" then
+	if event.itemname == "item_bag_of_gold" the
+		totalBagsPickedUp = totalBagsPickedUp + 1
+		local bonusGold = 20 * totalBagsPickedUp
+		local totalGold = r + bonusGold
 		--print("Bag of gold picked up")
-		PlayerResource:ModifyGold( owner:GetPlayerID(), r, true, 0 )
-		SendOverheadEventMessage( owner, OVERHEAD_ALERT_GOLD, owner, r, nil )
+		PlayerResource:ModifyGold( owner:GetPlayerID(), totalGold, true, 0 )
+		SendOverheadEventMessage( owner, OVERHEAD_ALERT_GOLD, owner, totalGold, nil )
 		UTIL_Remove( item ) -- otherwise it pollutes the player inventory
 	elseif event.itemname == "item_treasure_chest" then
 		--print("Special Item Picked Up")

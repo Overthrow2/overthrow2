@@ -59,7 +59,6 @@ function breathe_fire:OnProjectileHit( hTarget, vLocation )
 			damageSource = self:GetCaster().KillerToCredit
 		end
 
-		print(' dealing total damage : ' .. totalDamage )
 		
 		local damage = {
 			victim = hTarget,
@@ -70,6 +69,7 @@ function breathe_fire:OnProjectileHit( hTarget, vLocation )
 		}
 
 		ApplyDamage( damage )
+		SendOverheadEventMessage( hTarget, OVERHEAD_ALERT_DAMAGE, hTarget, damage, nil )
 	end
 
 	return false

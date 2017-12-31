@@ -534,7 +534,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"range"					"650"
+				"range"					"600"
 			}
 			"04"
 			{
@@ -559,7 +559,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tick_damage"			"20"
+				"tick_damage"			"30"
 			}
 			"09"
 			{
