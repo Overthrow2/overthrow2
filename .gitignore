@@ -16,3 +16,4 @@ content/*/*
 steam_shader_cache/*
 !game/dota_addons/overthrow2
 !content/dota_addons/overthrow2
+content/dota_addons/overthrow2/models/props_structures/midas_throne/sfm/overboss_throne_animations.dmx
