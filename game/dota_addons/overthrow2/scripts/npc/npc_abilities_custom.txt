@@ -631,7 +631,7 @@
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"activation_count_bonus_damage"			"100"
+				"activation_count_bonus_damage"			"50"
 			}
 		}
 	}

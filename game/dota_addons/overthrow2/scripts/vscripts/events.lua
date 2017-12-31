@@ -209,7 +209,7 @@ function COverthrowGameMode:OnItemPickUp( event )
 	local owner = EntIndexToHScript( event.HeroEntityIndex )
 	r = 280
 	--r = RandomInt(200, 400)
-	if event.itemname == "item_bag_of_gold" the
+	if event.itemname == "item_bag_of_gold" then
 		totalBagsPickedUp = totalBagsPickedUp + 1
 		local bonusGold = 20 * totalBagsPickedUp
 		local totalGold = r + bonusGold

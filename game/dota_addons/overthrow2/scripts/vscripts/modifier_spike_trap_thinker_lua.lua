@@ -55,7 +55,7 @@ function modifier_spike_trap_thinker_lua:OnIntervalThink()
 
 					ApplyDamage( damage )
 					enemy:AddNewModifier( self:GetCaster(), self:GetAbility(), "modifier_spike_trap_lua", { duration = self.light_strike_array_stun_duration } )
-					SendOverheadEventMessage( enemy, OVERHEAD_ALERT_DAMAGE, enemy, damage, nil )
+					SendOverheadEventMessage( enemy, OVERHEAD_ALERT_DAMAGE, enemy, totalDamage, nil )
 				end
 			end
 		end

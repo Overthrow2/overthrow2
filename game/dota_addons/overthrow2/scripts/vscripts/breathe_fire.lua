@@ -69,7 +69,7 @@ function breathe_fire:OnProjectileHit( hTarget, vLocation )
 		}
 
 		ApplyDamage( damage )
-		SendOverheadEventMessage( hTarget, OVERHEAD_ALERT_DAMAGE, hTarget, damage, nil )
+		SendOverheadEventMessage( hTarget, OVERHEAD_ALERT_DAMAGE, hTarget, totalDamage, nil )
 	end
 
 	return false
