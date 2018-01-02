@@ -4,7 +4,7 @@ Overthrow Game Mode
 
 _G.nNEUTRAL_TEAM = 4
 _G.nCOUNTDOWNTIMER = 901
-
+_G.nCOURIERS_SPAWNED = {}
 
 ---------------------------------------------------------------------------
 -- COverthrowGameMode class
@@ -352,6 +352,7 @@ end
 -- Update player labels and the scoreboard
 ---------------------------------------------------------------------------
 function COverthrowGameMode:OnThink()
+
 	for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
 		self:UpdatePlayerColor( nPlayerID )
 	end
@@ -390,7 +391,31 @@ function COverthrowGameMode:OnThink()
 		COverthrowGameMode:ThinkSpecialItemDrop()
 	end
 
+	if bCOURIERS_SPAWNED == false then
+		COverthrowGameMode:SpawnCouriers()
+	end
+	
 	return 1
+end
+
+
+function COverthrowGameMode:OnGameRulesStateChange(keys)
+	print( "State: " .. GameRules:State_Get() )
+	print(DOTA_GAMERULES_STATE_GAME_IN_PROGRESS )
+	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+		for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
+			local player = PlayerResource:GetPlayer(nPlayerID)
+			local hero = player:GetAssignedHero()
+			local playerID = hero:GetPlayerID()
+
+			print(hero:GetAbsOrigin())
+
+			local donkey = CreateUnitByName("npc_dota_courier", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeam())
+			donkey:SetOwner(hero)
+			donkey:SetControllableByPlayer(playerID, true)
+
+		end
+	end
 end
 
 ---------------------------------------------------------------------------

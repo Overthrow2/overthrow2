@@ -173,7 +173,7 @@ function COverthrowGameMode:SpecialItemAdd( event )
 	end
 	-- add the item to the inventory and broadcast
 	owner:AddItemByName( spawnedItem )
-	GameRules:SendCustomMessage( "#" .. owner:GetName() .. " picked up the treasure: " .. "#" .. spawnedItem, DOTA_TEAM_NOTEAM, 1)
+	-- GameRules:SendCustomMessage( "#" .. owner:GetUnitName() .. " picked up the treasure: " .. "#" .. spawnedItem, DOTA_TEAM_NOTEAM, 1)
 	EmitGlobalSound("powerup_04")
 	local overthrow_item_drop =
 	{
