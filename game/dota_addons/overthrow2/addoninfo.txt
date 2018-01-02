@@ -1,24 +1,24 @@
 "AddonInfo"
 {
 	"HeroGuidesSupported"		"1"
-	"mines_trio"
+	"forest_solo"
 	{
-		"MaxPlayers"		"9"
+		"MaxPlayers"		"10"
 	}
 	"desert_duo"
 	{
 		"MaxPlayers"		"10"
 	}
-	"forest_solo"
+	"mines_trio"
 	{
-		"MaxPlayers"		"10"
-	}
-	"desert_quintet"
-	{
-		"MaxPlayers"		"15"
+		"MaxPlayers"		"9"
 	}
 	"temple_quartet"
 	{
 		"MaxPlayers"		"16"
+	}
+	"desert_quintet"
+	{
+		"MaxPlayers"		"15"
 	}
 }

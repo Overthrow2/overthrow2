@@ -9,6 +9,7 @@ function BroadcastMessage( sMessage, fDuration )
         duration = fDuration
     }
     FireGameEvent( "show_center_message", centerMessage )
+	print('-- broadcast msg called : ' .. sMessage )
 end
 
 function PickRandomShuffle( reference_list, bucket )

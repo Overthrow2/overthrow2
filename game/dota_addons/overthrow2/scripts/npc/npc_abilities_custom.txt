@@ -635,6 +635,7 @@
 			}
 		}
 	}
+	
 	"pendulum_trap"
 	{
 		"BaseClass"           			"ability_lua"
