@@ -7,19 +7,27 @@
 	//=================================================================================================================
 	// Special Item Drops
 	//=================================================================================================================
-	"item_urn_of_shadows"
+	"item_arcane_boots"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_ring_of_aquila"
+	"item_medallion_of_courage"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_phase_boots"
+	"item_gem"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_power_treads"
+	"item_vladmir"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_ghost"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_vanguard"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
@@ -35,19 +43,7 @@
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_ghost"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
 	"item_mask_of_madness"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_medallion_of_courage"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_soul_ring"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
@@ -55,39 +51,11 @@
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_dagon"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_shivas_guard"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_vanguard"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_sphere"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_vladmir"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_yasha"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_diffusal_blade"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_helm_of_the_dominator"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
 	"item_mekansm"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_maelstrom"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
@@ -99,15 +67,7 @@
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_basher"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_invis_sword"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_desolator"
+	"item_glimmer_cape"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
@@ -115,27 +75,43 @@
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_dagon_5"
+	"item_rod_of_atos"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_greater_crit"
+	"item_desolator"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_sheepstick"
+	"item_aeon_disk"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_manta"
+	"item_yasha"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_heart"
+	"item_kaya"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_mjollnir"
+	"item_sange_and_yasha"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_shivas_guard"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_diffusal_blade"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_basher"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_invis_sword"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
@@ -155,15 +131,63 @@
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_black_king_bar"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
 	"item_bloodstone"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
+	"item_lotus_orb"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_guardian_greaves"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
 	"item_ethereal_blade"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_moon_shard"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_spirit_vessel"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_meteor_hammer"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_hurricane_pike"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_skadi"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_sphere"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_greater_crit"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_sheepstick"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_orchid"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_heart"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_mjollnir"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
@@ -183,27 +207,19 @@
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_rapier"
+	"item_satanic"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_glimmer_cape"
+	"item_black_king_bar"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_lotus_orb"
+	"item_assault"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_guardian_greaves"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_moon_shard"
-	{
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-	}
-	"item_solar_crest"
+	"item_octarine_core"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
@@ -211,7 +227,19 @@
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}
-	"item_octarine_core"
+	"item_rapier"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_moon_shard"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_nullifier"
+	{
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	}
+	"item_refresher"
 	{
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	}

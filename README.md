@@ -6,6 +6,8 @@ Overthrow 2 is an attempt to make Overthrow more fun and balanced, and also give
 
 The initial release will include a sweeping amount of changes - and probably be barely any more balanced than the current game, just shifting who is best!  But we have to start somewhere.  We plan on updating the map as frequently as needed, after observing the state of the game each change, to slowly adjust the heroes and items to be more fun.
 
+To start off with, we've largely reverted heroes to their base (Dota 7.07) state, and then worked from there.  This includes un-nerfing most of the heroes, including those with Invisibilty skills.  Sentry wards are cheaper to help compensate for this, but it will be closely monitored.
+
 There are NO PLANS for any custom heroes, abilities, or items.  Overthrow should continue to be "Dota Deathmatch Mode", and moving away from Dota's items and heroes moves away from that purpose.
 
 In addition to working out which heroes are overpowered and giving them slight adjustments, we hope to bring weaker heroes up to their level.  This includes changing some heroes to be more suited for "arena-style" combat, by decreasing cooldowns and durations of abilities to make them better suited for fast-paced situations and short matches.  We will also be adjusting minor things to make sure all heroes feel suitable for the maps, like playing around with trees (for Monkey King and Timbersaw) and neutral creeps (for Enchantress, Chen, Doom, Clinkz, etc).
@@ -17,6 +19,7 @@ In addition to working out which heroes are overpowered and giving them slight a
 * Undying
 * Bloodseeker
 * Pugna
+* Pangolier
 
 ## Current Change List
 
@@ -65,7 +68,7 @@ In addition to working out which heroes are overpowered and giving them slight a
 | Vanguard | Desolator | Shadow Blade | Sheepstick |
 | Ghost Scepter | Aghanim's Scepter | Aghanim's Scepter | Aghanim's Scepter |
 | Vladmir's Offering | Aeon Disk | Battlefury | Orchid Malevolence |
-| Gem of True Sight | Desolator | Pipe | Heart of Tarrasque |
+| Gem of True Sight | Desolator | Pipe of Insight | Heart of Tarrasque |
 | Medallion of Courage | Glimmer Cape | Heaven's Halberd | Mjollnir |
 | Arcane Boots | Veil of Discord | Crimson Guard | Radiance |
 | | Hood of Defiance | Bloodstone | Abyssal Blade |
@@ -129,49 +132,49 @@ In addition to working out which heroes are overpowered and giving them slight a
 
 ### Items
 
-#### Bloodstone
+#### <img src="http://cdn.dota2.com/apps/dota2/images/items/bloodstone_lg.png"/> Bloodstone
 
 * Initial charges reduced from 14 to 12
 * Charge gain radius decreased from 1600 to 1000
 
-#### Dragon Lance
+#### <img src="http://cdn.dota2.com/apps/dota2/images/items/dragon_lance_lg.png"/> Dragon Lance
 
 * Strength bonus reduced from 12 to 10
 
-#### Guardian Greaves
+#### <img src="http://cdn.dota2.com/apps/dota2/images/items/guardian_greaves_lg.png"/> Guardian Greaves
 
 * Cooldown and debuff duration reduced from 40 to 30
 
-#### Hurricane Pike
+#### <img src="http://cdn.dota2.com/apps/dota2/images/items/hurricane_pike_lg.png"/> Hurricane Pike
 
 * Strength bonus reduced from 15 to 13
 
-#### Kaya
+#### <img src="http://cdn.dota2.com/apps/dota2/images/items/trident_lg.png"/> Kaya
 
 * Spell amplification reduced from 10% to 7%
 * Mana loss reduction reduced from 10% to 7%
 
-#### Mekansm
+#### <img src="http://cdn.dota2.com/apps/dota2/images/items/mekansm_lg.png"/> Mekansm
 
 * Cooldown and debuff duration reduced from 65 to 45
 
-#### Radiance
+#### <img src="http://cdn.dota2.com/apps/dota2/images/items/radiance_lg.png"/> Radiance
 
 * Illusion damage increased from 35 to 50
 * Radius increased from 700 to 900
 
-#### Sentry Ward
+#### <img src="http://cdn.dota2.com/apps/dota2/images/items/ward_sentry_lg.png"/> Sentry Ward
 
 * Cost reduced from 100 gold to 50 gold
 
 ### Heroes
 
-#### Bane
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/bane_full.png"/> Bane
 
 * Fiend's Grip 
 * * Cast range increased from 625 to 750
 
-#### Bloodseeker
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/bloodseeker_full.png"/> Bloodseeker
 
 * **Enabled**
 * Bloodrage 
@@ -192,17 +195,17 @@ In addition to working out which heroes are overpowered and giving them slight a
 * * Movement damage increased from 30%/45%/60% to 45%/55%/65%
 * * Aghanim's Scepter charge restore cooldown increased from 40 to 60
 
-#### Bounty Hunter
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/bounty_hunter_full.png"/> Bounty Hunter
 
 * **All abilities** reverted to Dota 7.07 value
 
-#### Broodmother
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/broodmother_full.png"/> Broodmother
 
 * **All abilities** reverted to Dota 7.07 value
 * Spin Web 
 * * Bonus movement speed reduced from 40%/50%/60%/70% to 20%/30%/40%/50%
 
-#### Crystal Maiden
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/crystal_maiden_full.png"/> Crystal Maiden
 
 * Brilliance Aura
 * * Aura mana regen increased from 0.8/1.0/1.2/1.4 to 1.5/2.0/2.5/3.0
@@ -212,7 +215,7 @@ In addition to working out which heroes are overpowered and giving them slight a
 * * Attack and movement slow increased from -30 to -40
 * * Aghanim's Scepter Frostbite delay decreased from 2.5 to 2.0
 
-#### Dark Willow
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/dark_willow_full.png"/> Dark Willow
 
 * Bramble Maze
 * * Duration reduced from 15 to 10
@@ -223,29 +226,29 @@ In addition to working out which heroes are overpowered and giving them slight a
 * Terrorize
 * * Duration reduced from 4 to 3
 
-#### Enchantress
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/enchantress_full.png"/> Enchantress
 
 * Impetus 
 * * Maximum range damage cap reduced from 1750 to 1250
 
-#### Lone Druid
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/lone_druid_full.png"/> Lone Druid
 
 * **Enabled**
 
-#### Necrophos
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/necrolyte_full.png"/> Necrophos
 
 * Heartstopper Aura
 * * Damage reduced from 0.5%/1.0%/1.5%/2.0% to 0.4%/0.8%/1.2%/1.6%
 * Reaper's Scythe
 * * Respawn penalty reduced from 20 to 0/5/10
 
-#### Pudge
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/pudge_full.png"/> Pudge
 
 * Fixed bug causing Flesh Heap to give 0 Bonus Strength
 * Flesh Heap 
 * * Radius reverted to Dota 7.07 value
 
-#### Pugna
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/pugna_full.png"/> Pugna
 
 * **Enabled**
 * Nether Ward 
@@ -254,31 +257,31 @@ In addition to working out which heroes are overpowered and giving them slight a
 * * Mana degen reduced from -0.25/-0.5/-.75/-1 to -0.2/-0.4/-0.6/-0.8
 * * Attacks to destroy reduced from 4 to 3
 
-#### Riki
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/riki_full.png"/> Riki
 
 * **All abilities** reverted to Dota 7.07 value
 
-#### Shadow Shaman
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/shadow_shaman_full.png"/> Shadow Shaman
 
 * Mass Serpent Ward
 * * Cooldown reduced from 120 to 40
 * * Mana cost reduced from 250/350/600 to 200/300/400
 * * Duration reduced from 45 to 15
 
-#### Silencer
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/silencer_full.png"/> Silencer
 
 * Fixed bug causing Glaives of Wisdom to deal 0% Intelligence Bonus Damage
 * Glaives of Wisdom 
 * * Intelligence Bonus reverted to Dota 7.07 values
 
-#### Skywrath Mage
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/skywrath_mage_full.png"/> Skywrath Mage
 
 * Aghanim's Scepter 
 * * Target search radius for spell duplication reduced from 700 to 450
 * Ancient Seal 
 * * Magic resistance debuff reduced from -30%/-35%/-40%/-45% to -20%/-25%/-30%/-35%
 
-#### Tinker
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/tinker_full.png"/> Tinker
 
 * Laser 
 * * Miss chance reduced from 100% to 50%
@@ -290,7 +293,7 @@ In addition to working out which heroes are overpowered and giving them slight a
 * Rearm 
 * * Channel time increased from 3/1.5/0.75 to 3/2/1
 
-#### Undying
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/undying_full.png"/> Undying
 
 * **Enabled**
 * Decay
@@ -312,14 +315,14 @@ In addition to working out which heroes are overpowered and giving them slight a
 * * Radius reduced from 750 to 650
 * * Max damage amplification reduced from 20%/25%/30% to 15%/20%/25%
 
-#### Witch Doctor
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/witch_doctor_full.png"/> Witch Doctor
 
 * Paralyzing Cask
 * * Bounces increased from 2/4/6/8 to 3/5/7/9
 * Maledict
 * * Burst bonus damage increased from 16/24/32/40 to 20/28/36/44
 
-#### Zeus
+#### <img src="http://cdn.dota2.com/apps/dota2/images/heroes/zuus_full.png"/> Zeus
 
 * Thundergod's Wrath
 * * All values reverted to Dota 7.07 values
