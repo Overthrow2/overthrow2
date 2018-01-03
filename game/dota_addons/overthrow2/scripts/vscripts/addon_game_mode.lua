@@ -348,10 +348,34 @@ function COverthrowGameMode:UpdateScoreboard()
 	end
 end
 
+local courierDelay = 2
+local currentCourierDelay = 0
 ---------------------------------------------------------------------------
 -- Update player labels and the scoreboard
 ---------------------------------------------------------------------------
 function COverthrowGameMode:OnThink()
+
+	if GameRules:State_Get() == DOTA_GAMERULES_STATE_PRE_GAME then
+		currentCourierDelay = currentCourierDelay + 1
+		if currentCourierDelay > courierDelay then
+			for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
+				local player = PlayerResource:GetPlayer(nPlayerID)
+				if player ~= nil then
+					local hero = player:GetAssignedHero()
+					if SPAWNED_COURIERS[hero:GetTeam()] == nil then
+						local playerID = hero:GetPlayerID()
+
+						local donkey = CreateUnitByName("npc_dota_courier", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeam())
+						donkey:SetOwner(hero)
+						donkey:SetControllableByPlayer(playerID, true)
+						SPAWNED_COURIERS[hero:GetTeam()] = true
+					end
+				end
+			end
+			
+			currentCourierDelay = -1000
+		end
+	end
 
 	for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
 		self:UpdatePlayerColor( nPlayerID )
@@ -390,34 +414,9 @@ function COverthrowGameMode:OnThink()
 		COverthrowGameMode:ThinkGoldDrop()
 		COverthrowGameMode:ThinkSpecialItemDrop()
 	end
-
-	if bCOURIERS_SPAWNED == false then
-		COverthrowGameMode:SpawnCouriers()
-	end
 	
 	return 1
 end
-
-
-function COverthrowGameMode:OnGameRulesStateChange(keys)
-	print( "State: " .. GameRules:State_Get() )
-	print(DOTA_GAMERULES_STATE_GAME_IN_PROGRESS )
-	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
-			local player = PlayerResource:GetPlayer(nPlayerID)
-			local hero = player:GetAssignedHero()
-			local playerID = hero:GetPlayerID()
-
-			print(hero:GetAbsOrigin())
-
-			local donkey = CreateUnitByName("npc_dota_courier", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeam())
-			donkey:SetOwner(hero)
-			donkey:SetControllableByPlayer(playerID, true)
-
-		end
-	end
-end
-
 ---------------------------------------------------------------------------
 -- Scan the map to see which teams have spawn points
 ---------------------------------------------------------------------------
