@@ -14,7 +14,10 @@ function COverthrowGameMode:OnGameRulesStateChange()
 		if numberOfPlayers > 15 then
 			--self.TEAM_KILLS_TO_WIN = 25
 			nCOUNTDOWNTIMER = 1201
-		elseif numberOfPlayers > 7 and numberOfPlayers <= 15 then
+		elseif numberOfPlayers > 12 and numberOfPlayers <= 15 then
+			--self.TEAM_KILLS_TO_WIN = 25
+			nCOUNTDOWNTIMER = 1051
+		elseif numberOfPlayers > 7 and numberOfPlayers <= 12 then
 			--self.TEAM_KILLS_TO_WIN = 25
 			nCOUNTDOWNTIMER = 901
 		elseif numberOfPlayers > 4 and numberOfPlayers <= 7 then
