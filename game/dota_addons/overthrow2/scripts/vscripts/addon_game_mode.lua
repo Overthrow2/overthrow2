@@ -82,15 +82,15 @@ end
 -- Initializer
 ---------------------------------------------------------------------------
 
-function COverthrowGameMode:pickRandomRune()
+function COverthrowGameMode:PickRandomRune()
     local validRunes = {
-        0,
-        1,
-        2,
-        3,
-        -- 4,
-        -- 5,
-        6
+        DOTA_RUNE_DOUBLEDAMAGE,
+        DOTA_RUNE_HASTE,
+        DOTA_RUNE_ILLUSION,
+        DOTA_RUNE_INVISIBILITY,
+        -- DOTA_RUNE_REGENERATION,
+        -- DOTA_RUNE_BOUNTY,
+        DOTA_RUNE_ARCANE
     }
 
     return validRunes[math.random(#validRunes)]
@@ -98,7 +98,6 @@ end
 
 function COverthrowGameMode:InitGameMode()
 	print( "Overthrow 2 is loaded." )
-	
 --	CustomNetTables:SetTableValue( "test", "value 1", {} );
 --	CustomNetTables:SetTableValue( "test", "value 2", { a = 1, b = 2 } );
 
@@ -211,10 +210,8 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetBountyRunePickupFilter( Dynamic_Wrap( COverthrowGameMode, "BountyRunePickupFilter" ), self )
 	GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( COverthrowGameMode, "ExecuteOrderFilter" ), self )
 
-    local totalRunes = 0
-    local needBounty = false
     GameRules:GetGameModeEntity():SetRuneSpawnFilter(function(context, runeStuff)
-		runeStuff.rune_type = COverthrowGameMode:pickRandomRune()
+		runeStuff.rune_type = COverthrowGameMode:PickRandomRune()
         return true
     end, self)
 
