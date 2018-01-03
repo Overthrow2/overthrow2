@@ -9,18 +9,17 @@ function COverthrowGameMode:OnGameRulesStateChange()
 	local nNewState = GameRules:State_Get()
 	--print( "OnGameRulesStateChange: " .. nNewState )
 
-	if nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
-
-	end
-
 	if nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
 		local numberOfPlayers = PlayerResource:GetPlayerCount()
-		if numberOfPlayers > 7 then
+		if numberOfPlayers > 15 then
+			--self.TEAM_KILLS_TO_WIN = 25
+			nCOUNTDOWNTIMER = 1201
+		elseif numberOfPlayers > 7 and numberOfPlayers <= 15 then
 			--self.TEAM_KILLS_TO_WIN = 25
 			nCOUNTDOWNTIMER = 901
 		elseif numberOfPlayers > 4 and numberOfPlayers <= 7 then
 			--self.TEAM_KILLS_TO_WIN = 20
-			nCOUNTDOWNTIMER = 721
+			nCOUNTDOWNTIMER = 751
 		else
 			--self.TEAM_KILLS_TO_WIN = 15
 			nCOUNTDOWNTIMER = 601
@@ -152,6 +151,7 @@ function COverthrowGameMode:OnEntityKilled( event )
 				end
 			end
 		end
+		
 		if hero:IsRealHero() and heroTeam ~= killedTeam then
 			--print("Granting killer xp")
 			if killedUnit:GetTeam() == self.leadingTeam and self.isGameTied == false then

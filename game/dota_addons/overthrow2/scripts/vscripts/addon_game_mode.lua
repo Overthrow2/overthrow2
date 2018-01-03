@@ -81,8 +81,23 @@ end
 ---------------------------------------------------------------------------
 -- Initializer
 ---------------------------------------------------------------------------
+
+function COverthrowGameMode:pickRandomRune()
+    local validRunes = {
+        0,
+        1,
+        2,
+        3,
+        -- 4,
+        -- 5,
+        6
+    }
+
+    return validRunes[math.random(#validRunes)]
+end
+
 function COverthrowGameMode:InitGameMode()
-	print( "Overthrow is loaded." )
+	print( "Overthrow 2 is loaded." )
 	
 --	CustomNetTables:SetTableValue( "test", "value 1", {} );
 --	CustomNetTables:SetTableValue( "test", "value 2", { a = 1, b = 2 } );
@@ -196,6 +211,12 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetBountyRunePickupFilter( Dynamic_Wrap( COverthrowGameMode, "BountyRunePickupFilter" ), self )
 	GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( COverthrowGameMode, "ExecuteOrderFilter" ), self )
 
+    local totalRunes = 0
+    local needBounty = false
+    GameRules:GetGameModeEntity():SetRuneSpawnFilter(function(context, runeStuff)
+		runeStuff.rune_type = COverthrowGameMode:pickRandomRune()
+        return true
+    end, self)
 
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( COverthrowGameMode, 'OnGameRulesStateChange' ), self )
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( COverthrowGameMode, "OnNPCSpawned" ), self )
