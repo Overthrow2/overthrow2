@@ -86,21 +86,21 @@ In addition to working out which heroes are overpowered and giving them slight a
 
 ### Maps
 
+### All Maps
+
+* Sparse trees added at various points
 
 #### Mines Trio
 
 * Kills to win increased to 40
-* Sparse trees added to various points
 
 #### Temple Quartet
 
 * Shops have been resized to be usable in the entire fountain area
-* Sparse trees added to various points
 
 #### Desert Quintet
 
 * Spike traps added to center area to make movement more complex
-* Sparse trees added to various points
 
 ### Traps
 
