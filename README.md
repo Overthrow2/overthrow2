@@ -25,19 +25,20 @@ In addition to working out which heroes are overpowered and giving them slight a
 
 ### General
 
-* Automatic launch delay reduced from 30 to 5
+* Automatic launch delay reduced from 30 seconds to 5 seconds
 * Hero selections are no longer at the top of the screen during the picking phase
 * Teams now start the game with a courier
 * Runes spawns changed from every 2 minutes to every 1 minute
 * Arcane Rune has been enabled
+* Tree respawn timer reduced to 60 seconds
 * Shops have been updated to reflect the currently available Dota items
 * Gold coin value increased from 300 to 300 + Scaling Bonus
 * * Scaling Bonus: Increases value by 20 every time a coin is picked up
 * Frequency of "long throw" animation for coins reduced from 20% to 5%
 * Global XP and Gold auras changed as follows:
-* * Weak aura: 6 XP / 4 Gold => 8 XP / 5 Gold
-* * Moderate aura: 8 XP / 4 Gold => 10 XP / 6 Gold
-* * Strong aura: 16 XP / 10 Gold => 20 XP / 12 Gold
+* * Weak aura: 6 XP / 4 Gold => 7 XP / 4 Gold
+* * Moderate aura: 8 XP / 4 Gold => 9 XP / 5 Gold
+* * Strong aura: 16 XP / 10 Gold => 18 XP / 10 Gold
 * Game Timer has been changed as follows:
 * * 1 to 3 players: 10 minutes
 * * 4 to 7 players: 12 minutes 30 seconds (previously 15 minutes)
@@ -58,7 +59,7 @@ In addition to working out which heroes are overpowered and giving them slight a
 * * * Leading team gets a (tier) level item.  Other teams get a (tier + 1) level item.  Some items are shared.
 
 
-|| Drops 1 - 3 | Drops 4+ ||
+| Drops 1-3 | Drops 1 - 3 | Drops 4+ | Drops 4+ |
 |:---:|:---:|:---:|:---:|
 | **Leader** | **Other Teams** | **Leader** | **Other Teams** |
 | Blink | Blink | Sange and Yasha | Hurricane Pike |
