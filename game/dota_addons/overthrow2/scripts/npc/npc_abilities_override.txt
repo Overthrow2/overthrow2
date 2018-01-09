@@ -711,7 +711,43 @@
 		}
 	}
 	
-	
+	//=================================================================================================================
+	// Enigma: Black Hole
+	//=================================================================================================================
+	"enigma_black_hole"
+	{
+		"AbilityChannelTime"			"2.5 2.5 2.5"
+		"AbilityCooldown"				"125.0 110.0 95.0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"far_damage"			"25 50 75"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"far_radius"			"390"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"pull_radius"			"390"
+			}		
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"near_damage"			"70 140 210"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2.5 2.5 2.5"
+			}
+		}
+	}
 	
 	//=================================================================================================================
 	// Necrolyte: Heartstopper Aura
@@ -771,24 +807,14 @@
 				"var_type"				"FIELD_FLOAT"
 				"mana_pool_damage_pct"	"5 6 7 8"
 			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"illusion_damage"		"100 200 300 400"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"int_steal"		"1 2 3 4"
-			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"int_steal_duration"		"15"
+				"LinkedSpecialBonus"	"special_bonus_unique_outworld_devourer"
 			}
 		}
 	}
-	
 	//=================================================================================================================
 	// Pugna: Nether Ward
 	//=================================================================================================================

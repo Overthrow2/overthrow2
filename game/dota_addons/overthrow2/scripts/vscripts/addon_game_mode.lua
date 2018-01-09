@@ -96,8 +96,28 @@ function COverthrowGameMode:PickRandomRune()
     return validRunes[math.random(#validRunes)]
 end
 
+local seen={}
+
+function dump(t,i)
+	seen[t]=true
+	local s={}
+	local n=0
+	for k in pairs(t) do
+		n=n+1 s[n]=k
+	end
+	table.sort(s)
+	for k,v in ipairs(s) do
+		print(i,v)
+		v=t[v]
+		if type(v)=="table" and not seen[v] then
+			dump(v,i.."\t")
+		end
+	end
+end
+
 function COverthrowGameMode:InitGameMode()
 	print( "Overthrow 2 is loaded." )
+	
 --	CustomNetTables:SetTableValue( "test", "value 1", {} );
 --	CustomNetTables:SetTableValue( "test", "value 2", { a = 1, b = 2 } );
 
@@ -186,12 +206,16 @@ function COverthrowGameMode:InitGameMode()
 	-- Show the ending scoreboard immediately
 	GameRules:SetCustomGameEndDelay( 0 )
 	GameRules:SetCustomVictoryMessageDuration( 10 )
+	GameRules:SetCustomGameSetupTimeout( 1 )
+	GameRules:SetCustomGameSetupAutoLaunchDelay( 0 )
+	GameRules:EnableCustomGameSetupAutoLaunch( false )
 	GameRules:SetPreGameTime( 10 )
+	GameRules:SetHeroSelectionTime( 30.0 )
 	GameRules:SetStrategyTime( 0.0 )
 	GameRules:SetShowcaseTime( 0.0 )
 	GameRules:SetRuneSpawnTime( 60.0 )
 	GameRules:SetTreeRegrowTime( 60.0 )
-	GameRules:SetCustomGameSetupAutoLaunchDelay( 5.0 )
+	GameRules:SetStartingGold( 100 )
 	--GameRules:SetHideKillMessageHeaders( true )
 	GameRules:GetGameModeEntity():SetTopBarTeamValuesOverride( true )
 	GameRules:GetGameModeEntity():SetTopBarTeamValuesVisible( false )
@@ -222,7 +246,8 @@ function COverthrowGameMode:InitGameMode()
 	ListenToGameEvent( "entity_killed", Dynamic_Wrap( COverthrowGameMode, 'OnEntityKilled' ), self )
 	ListenToGameEvent( "dota_item_picked_up", Dynamic_Wrap( COverthrowGameMode, "OnItemPickUp"), self )
 	ListenToGameEvent( "dota_npc_goal_reached", Dynamic_Wrap( COverthrowGameMode, "OnNpcGoalReached" ), self )
-
+    ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( COverthrowGameMode, "OnHeroPicked" ), self )
+	
 	Convars:RegisterCommand( "overthrow_force_item_drop", function(...) self:ForceSpawnItem() end, "Force an item drop.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_force_gold_drop", function(...) self:ForceSpawnGold() end, "Force gold drop.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_set_timer", function(...) return SetTimer( ... ) end, "Set the timer.", FCVAR_CHEAT )
@@ -242,6 +267,12 @@ function COverthrowGameMode:InitGameMode()
 			WaypointName = "camp"..i.."_path_wp1"
 		}
 	end
+end
+
+function COverthrowGameMode:OnHeroPicked(event)
+	local hero = EntIndexToHScript(event.heroindex)
+	hero:AddItemByName( "item_boots" )
+	hero:AddItemByName( "item_magic_stick" )
 end
 
 ---------------------------------------------------------------------------
@@ -373,6 +404,10 @@ local currentCourierDelay = 0
 -- Update player labels and the scoreboard
 ---------------------------------------------------------------------------
 function COverthrowGameMode:OnThink()
+
+	if GameRules:State_Get() >= DOTA_GAMERULES_STATE_PRE_GAME and GameRules:IsGamePaused() then
+		PauseGame(false)
+	end
 
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_PRE_GAME then
 		currentCourierDelay = currentCourierDelay + 1
