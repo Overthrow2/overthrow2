@@ -21,7 +21,7 @@ In addition to working out which heroes are overpowered and giving them slight a
 * Pugna
 * Pangolier
 
-## Current Change List
+## Release Candidate Version 1
 
 ### General
 
