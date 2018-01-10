@@ -25,7 +25,7 @@ In addition to working out which heroes are overpowered and giving them slight a
 
 ### General
 
-* Automatic launch delay reduced from 30 seconds to 5 seconds
+* Automatic launch delay reduced from 30 seconds to 1 second
 * Pauses now end automatically
 * Hero selections are no longer at the top of the screen during the picking phase
 * Teams now start the game with a courier
@@ -251,6 +251,14 @@ In addition to working out which heroes are overpowered and giving them slight a
 * * Slow reduced from -20%/-40%/-60%/-80%/-100%/-120%/140%/-160% to -10%/-20%/-30%/-40%/-50%/-60%/-70%/-80%
 * Deafening Blast
 * * Disarm duration reduced from 1.25/2/2.75/3.5/4.25/5/5.75/6.5 to 1/1.5/2/2.5/3/3.5/4/4.5
+
+
+#### <img width="50" src="http://cdn.dota2.com/apps/dota2/images/heroes/keeper_of_the_light_full.png"/> Keeper of the Light
+
+* Illuminate
+* * Decreased channel time from 2/3/4/5 to 1.6/2.4/3.2/4.0
+* * Increased damage per second from 100 to 125
+* * (Total damage remains unchanged, but happens 1 second sooner at max level)
 
 #### <img width="50" src="http://cdn.dota2.com/apps/dota2/images/heroes/lone_druid_full.png"/> Lone Druid
 

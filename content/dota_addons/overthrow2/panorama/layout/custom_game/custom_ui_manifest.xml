@@ -44,7 +44,7 @@
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_8] = "file://{images}/custom_game/team_icons/team_icon_horse_01.png";
 
 		// HUD Hack, made by Cookies #42 [Earth Salamander]
-		// Hide normal picking screen
+		// Modify normal picking screen
 		var Parent = $.GetContextPanel().GetParent().GetParent()
 		Parent.FindChildTraverse("PreGame").SetHasClass("StrategyTabVisible", false);
 		Parent.FindChildTraverse("PreGame").SetHasClass("LoadoutTabVisible", true);
