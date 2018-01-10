@@ -115,12 +115,12 @@ In addition to working out which heroes are overpowered and giving them slight a
 * Activation cooldown increased from 2 seconds to 4 seconds
 * Range reduced from 650 to 500
 * Damage reduced from 400 to 150 + Scaling Bonus
-* * Scaling Bonus: Increases damage by 50 each time the trap is activated
+* * Scaling Bonus: Increases damage by 20 each time the trap is activated
 
 #### Spike Trap
 
 * Damage reduced from 600 to 300 + Scaling Bonus
-* * Scaling Bonus: Increases damage by 50 each time the trap is activated
+* * Scaling Bonus: Increases damage by 20 each time the trap is activated
 
 #### Poison Trap
 
