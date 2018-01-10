@@ -209,7 +209,7 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:SetCustomGameSetupTimeout( 1 )
 	GameRules:SetCustomGameSetupAutoLaunchDelay( 0 )
 	GameRules:EnableCustomGameSetupAutoLaunch( false )
-	GameRules:SetPreGameTime( 10 )
+	GameRules:SetPreGameTime( 10.0 )
 	GameRules:SetHeroSelectionTime( 30.0 )
 	GameRules:SetStrategyTime( 0.0 )
 	GameRules:SetShowcaseTime( 0.0 )
@@ -400,11 +400,11 @@ end
 
 local courierDelay = 2
 local currentCourierDelay = 0
+local pastSelect = false
 ---------------------------------------------------------------------------
 -- Update player labels and the scoreboard
 ---------------------------------------------------------------------------
 function COverthrowGameMode:OnThink()
-
 	if GameRules:State_Get() >= DOTA_GAMERULES_STATE_PRE_GAME and GameRules:IsGamePaused() then
 		PauseGame(false)
 	end

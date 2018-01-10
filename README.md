@@ -26,6 +26,7 @@ In addition to working out which heroes are overpowered and giving them slight a
 ### General
 
 * Automatic launch delay reduced from 30 seconds to 5 seconds
+* Pauses now end automatically
 * Hero selections are no longer at the top of the screen during the picking phase
 * Teams now start the game with a courier
 * Runes spawns changed from every 2 minutes to every 1 minute
@@ -232,6 +233,15 @@ In addition to working out which heroes are overpowered and giving them slight a
 * Impetus 
 * * Maximum range damage cap reduced from 1750 to 1250
 
+#### <img width="50" src="http://cdn.dota2.com/apps/dota2/images/heroes/enigma_full.png"/> Enigma
+
+* Black Hole
+* * Radius reduced from 420 to 390
+* * Far damage reduced from 50/100/150 to 25/50/75
+* * Near damage increased from 50/100/150 to 70/140/210
+* * Duration reduced from 4 to 2.5
+* * Cooldown reduced from 200/180/160 to 125/110/95
+
 #### <img width="50" src="http://cdn.dota2.com/apps/dota2/images/heroes/lone_druid_full.png"/> Lone Druid
 
 * **Enabled**
@@ -242,6 +252,10 @@ In addition to working out which heroes are overpowered and giving them slight a
 * * Damage reduced from 0.5%/1.0%/1.5%/2.0% to 0.4%/0.8%/1.2%/1.6%
 * Reaper's Scythe
 * * Respawn penalty reduced from 20 to 0/5/10
+
+#### <img width="50" src="http://cdn.dota2.com/apps/dota2/images/heroes/obsidian_destroyer_full.png"/> Outworld Devourer
+
+* Fixed bug causing Arcane Orb to not steal Intelligence
 
 #### <img width="50" src="http://cdn.dota2.com/apps/dota2/images/heroes/pudge_full.png"/> Pudge
 
@@ -274,6 +288,15 @@ In addition to working out which heroes are overpowered and giving them slight a
 * Fixed bug causing Glaives of Wisdom to deal 0% Intelligence Bonus Damage
 * Glaives of Wisdom 
 * * Intelligence Bonus reverted to Dota 7.07 values
+
+#### <img width="50" src="http://cdn.dota2.com/apps/dota2/images/heroes/slark_full.png"/> Slark
+
+* Essence Shift
+* * Agility gain reduced from 3 to 2
+* * Duration reduced from 15/30/60/120 to 8/12/16/20
+* * Duration increase talent reduced from +120 to +15
+* Shadow Dance
+* * Cooldown increased from 60 to 75
 
 #### <img width="50" src="http://cdn.dota2.com/apps/dota2/images/heroes/skywrath_mage_full.png"/> Skywrath Mage
 
@@ -330,3 +353,7 @@ In addition to working out which heroes are overpowered and giving them slight a
 * Lightning Cloud 
 * * Duration reduced from 35 to 25
 * * Lightning bolt interval increased from 2.25 to 2.5
+
+### Known Bugs
+
+* Strategy Time panels load on top of each other under many circumstances

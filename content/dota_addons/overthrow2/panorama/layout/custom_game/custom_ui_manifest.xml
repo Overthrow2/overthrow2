@@ -42,7 +42,23 @@
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_6] = "file://{images}/custom_game/team_icons/team_icon_boar_01.png";
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_7] = "file://{images}/custom_game/team_icons/team_icon_snake_01.png";
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_8] = "file://{images}/custom_game/team_icons/team_icon_horse_01.png";
-        
+
+		// HUD Hack, made by Cookies #42 [Earth Salamander]
+		// Hide normal picking screen
+		var Parent = $.GetContextPanel().GetParent().GetParent()
+		Parent.FindChildTraverse("PreGame").SetHasClass("StrategyTabVisible", false);
+		Parent.FindChildTraverse("PreGame").SetHasClass("LoadoutTabVisible", true);
+		Parent.FindChildTraverse("HeroPickMinimap").style.visibility = "collapse";
+		Parent.FindChildTraverse("GridTeamComp").style.visibility = "collapse";
+		Parent.FindChildTraverse("BattlePassContainer").style.visibility = "collapse";
+		Parent.FindChildTraverse("AvailableItemsContainer").style.visibility = "collapse";
+		Parent.FindChildTraverse("StrategyTab").style.visibility = "collapse";
+		Parent.FindChildTraverse("StrategyTabButton").style.visibility = "collapse";
+		Parent.FindChildTraverse("StrategyTabButton").SetHasClass("Activated", false);
+		Parent.FindChildTraverse("LoadoutTabButton").SetHasClass("Activated", false);
+		Parent.FindChildTraverse("HeroLockedNav").FindChildrenWithClassTraverse("StrategyPhaseTabSeparator")[0].style.visibility = "collapse";
+		Parent.FindChildTraverse("Chat").style.width = "fill-parent-flow(1.0)";
+		Parent.FindChildTraverse("Chat").style.marginLeft = "10%";
 	</script>
 		
 	<Panel>
