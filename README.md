@@ -242,6 +242,16 @@ In addition to working out which heroes are overpowered and giving them slight a
 * * Duration reduced from 4 to 2.5
 * * Cooldown reduced from 200/180/160 to 125/110/95
 
+#### <img width="50" src="http://cdn.dota2.com/apps/dota2/images/heroes/invoker_full.png"/> Invoker
+
+* Catacylsm
+* * Increased cooldown from 90 to 105
+* Ice Wall
+* * Duration reduced from 3/4.5/6/7.5/9/10.5/12/13.5 to 3/3.5/4/4.5/5/5.5/6/6.5
+* * Slow reduced from -20%/-40%/-60%/-80%/-100%/-120%/140%/-160% to -10%/-20%/-30%/-40%/-50%/-60%/-70%/-80%
+* Deafening Blast
+* * Disarm duration reduced from 1.25/2/2.75/3.5/4.25/5/5.75/6.5 to 1/1.5/2/2.5/3/3.5/4/4.5
+
 #### <img width="50" src="http://cdn.dota2.com/apps/dota2/images/heroes/lone_druid_full.png"/> Lone Druid
 
 * **Enabled**
